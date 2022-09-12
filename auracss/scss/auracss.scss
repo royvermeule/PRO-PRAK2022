@@ -15,6 +15,8 @@
 // a local Icon css file insted. See the README for more information.
 @import url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css');
 
+
+@import './overwrite.scss';
 // When using a custom Icon provider, please update this to represent
 // the base class that is used by those icons.
 // The default value is for Boxicons.
