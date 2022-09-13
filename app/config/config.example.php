@@ -6,7 +6,7 @@ define('DB_NAME', 'mvcframework');
 
 define('APPROOT', dirname(dirname(__FILE__))) ;
 
-define('URLROOT', 'http://www.mvc-framework.org');
+define('URLROOT', 'http://localhost/');
 
-define('SITENAME', 'MVC Framework');
+define('SITENAME', 'MVC Framework reference');
 ?>
