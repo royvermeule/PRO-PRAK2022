@@ -24,16 +24,16 @@ $basic-shadow_hover: .1rem .3rem .5rem rgb(129, 129, 129);
 
 /* COLORS */
 $colors: (
-    'theme': #623CEA,
-    'accent' : #623CEA,
-    'background': #171A21,
-    'background-bright' : #1f232c,
+    'theme': #1daeec,
+    'accent' : #1daeec,
+    'background': white,
+    'background-bright' : #f7f7f7,
 );
 $text-colors: (
-    'normal': rgb(216, 216, 216),
+    'normal': black,
     'white': rgb(255, 255, 255),
     'gray': rgb(70, 70, 70),
-    'accent' : #623CEA,
+    'theme' : GetColor('theme'),
 );
 
 
@@ -66,7 +66,7 @@ $footer-color: map-get($map: $colors, $key: 'theme');
 
 // Forms
 $fields_bg_color: GetColor('background-bright');
-$fields_text_color: GetTextColor('white');
+$fields_text_color: GetTextColor('normal');
 
 // Banner
 $banner-height: 2rem;
