@@ -12,8 +12,8 @@ class User extends BaseModel {
      * @param id The id of the user
      */
     public function getById($id) {
-        $this->db->query("SELECT * FROM users WHERE id = :id");
-        $this->db->bind(':id', $id);
+        $this->db->query("SELECT * FROM User WHERE id = :id");
+        $this->db->bind(':id', $id, PDO::PARAM_INT);
         return $this->db->single();
     }
 
@@ -22,16 +22,16 @@ class User extends BaseModel {
      * @param email The email of the user
      */
     public function getByEmail($email) {
-        $this->db->query("SELECT * FROM users WHERE email = :email");
-        $this->db->bind(':email', $email);
+        $this->db->query("SELECT * FROM User WHERE email = :email");
+        $this->db->bind(':email', $email, PDO::PARAM_STR);
         return $this->db->single();
     }
 
     /**
-     * Get all users
+     * Get all User
      */
     public function getAll() {
-        $this->db->query("SELECT * FROM users");
+        $this->db->query("SELECT * FROM User");
         return $this->db->resultSet();
     }
 
@@ -40,10 +40,10 @@ class User extends BaseModel {
      * @param data The data of the user
      */
     public function createUser($data) {
-        $this->db->query("INSERT INTO users (email, password, userrole) VALUES (:email, :password, :userrole)");
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':password', $data['password']);
-        $this->db->bind(':userrole', $data['userrole']);
+        $this->db->query("INSERT INTO User (email, password, userrole) VALUES (:email, :password, :userrole)");
+        $this->db->bind(':email', $data['email'], PDO::PARAM_STR);
+        $this->db->bind(':password', $data['password'], PDO::PARAM_STR);
+        $this->db->bind(':userrole', $data['userrole'], PDO::PARAM_STR);
         return $this->db->execute();
     }
 
@@ -52,11 +52,11 @@ class User extends BaseModel {
      * @param data The data of the user
      */
     public function updateUser($data) {
-        $this->db->query("UPDATE users SET email = :email, password = :password, userrole = :userrole WHERE id = :id");
-        $this->db->bind(':id', $data['id']);
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':password', $data['password']);
-        $this->db->bind(':userrole', $data['userrole']);
+        $this->db->query("UPDATE User SET email = :email, password = :password, userrole = :userrole WHERE id = :id");
+        $this->db->bind(':id', $data['id'], PDO::PARAM_INT);
+        $this->db->bind(':email', $data['email'], PDO::PARAM_STR);
+        $this->db->bind(':password', $data['password'], PDO::PARAM_STR);
+        $this->db->bind(':userrole', $data['userrole'], PDO::PARAM_STR);
         return $this->db->execute();
     }
 
@@ -65,8 +65,8 @@ class User extends BaseModel {
      * @param id The id of the user
      */
     public function deleteUser($id) {
-        $this->db->query("DELETE FROM users WHERE id = :id");
-        $this->db->bind(':id', $id);
+        $this->db->query("DELETE FROM User WHERE id = :id");
+        $this->db->bind(':id', $id, PDO::PARAM_INT);
         return $this->db->execute();
     }
 }

@@ -6,7 +6,7 @@ class Controller {
   
 
   public function model($model) {
-    require_once('../app/models/' . $model . '.php');
+    require_once('../app/models/' . $model . '.model.php');
     return new $model();
   }
 
@@ -17,4 +17,13 @@ class Controller {
       die('View bestaat niet');
     }
   }
+}
+
+class BaseModel {
+  private $db;
+
+  public function __construct() {
+      $this->db = new Database();
+  }
+
 }
