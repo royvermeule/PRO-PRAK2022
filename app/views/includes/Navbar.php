@@ -1,16 +1,9 @@
-<nav class="nav-top">
-    <div class="siteinfo">
-
-    </div>
-
-    <ul>
+<h3 class="titles"><?= $data['title']; ?></h3>
+<nav>
+    <ul class="nav-links">
         <li>
-            <a href="/dashboard"><span>Home</span></a>
-        </li>
-        <li>
-            <a href="/dashboard"><span>Log in</span></a>
+            <a href="/Home/index">Home</a>
         </li>
     </ul>
-
-    <a class="nav-hamburger"><i class='bx bx-menu txt-align-center'></i></a>
 </nav>
+<a href="..."><button>Login</button></a>

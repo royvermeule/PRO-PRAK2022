@@ -8,18 +8,9 @@
 <body>
     <header>
         <?php require_once APPROOT . '/views/includes/navbar.php' ?>
+        <?php require_once APPROOT . '/views/includes/sidebar.php' ?>
     </header>
     <main>
-        <div class="grid-main">
-            <div>
-                <?php require_once APPROOT . '/views/includes/sidebar.php'; ?>
-            </div>
-            <div class="main-grid-items">
-                <div class="container-3">
-
-                </div>
-            </div>
-        </div>
 
     </main>
     <footer>
