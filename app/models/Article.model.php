@@ -2,8 +2,8 @@
 class Article extends BaseModel {
     private $db; //pdo database object
 
-    public function __construct(Database $DB = new Database()) {
-        $this->db = $DB;
+    public function __construct() {
+        $this->db = new Database();
     }
 
     /**
