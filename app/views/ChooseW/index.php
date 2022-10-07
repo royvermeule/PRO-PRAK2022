@@ -25,11 +25,23 @@
     <div class="container-11">
         <div class="row flex-jc-center">
             <div class="flex-jc-center-height">
-                <table>
-                    <td><button><a href="<?=URLROOT?>/CWControllers/WDaltonlaan100">Daltonlaan100</a></button></td>
-                    <td><button><a href="<?=URLROOT?>/CWControllers/WDaltonlaan200">Daltonlaan200</a></button></td>
-                    <td><button><a href="<?=URLROOT?>/CWControllers/WDaltonlaan300">Daltonlaan300</a></button></td>
-                </table>
+                <?php //var_dump($data); ?>
+                <!-- foreach loop
+                loop door data[warehouses]
+                <=URLROOT?>/CWControllers/<=id?> -->
+<table>
+<?php 
+                foreach ($data['warehouses'] as $warehouse) {
+                    ?>
+                    <td><button><a href="<?=URLROOT?>/controllers/CWControllers/<?=$warehouse->id?>"><?= $warehouse->name?></a></button></td>
+            
+                        <?php }?>
+</table>
+                <!-- <table>
+                    <td><button><a href="<=URLROOT?>/CWControllers/WDaltonlaan100">Daltonlaan100</a></button></td>
+                    <td><button><a href="<=URLROOT?>/CWControllers/WDaltonlaan200">Daltonlaan200</a></button></td>
+                    <td><button><a href="<=URLROOT?>/CWControllers/WDaltonlaan300">Daltonlaan300</a></button></td>
+                </table> -->
             </div>
         </div>
     </div>
