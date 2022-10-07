@@ -1,7 +1,360 @@
-h3 {
-  border: 2px solid red;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
 }
 
-#test {
-  display: none;
+::-webkit-scrollbar {
+    width: 20px;
 }
+
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(48, 164, 252);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightskyblue;
+}
+
+.titles {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #0e0d0c;
+    margin-right: auto;
+    cursor: default;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0e0d0c;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 30px 10%;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+    padding-top: 10px;
+}
+
+
+
+.nav-links li a {
+    transition: all 0.3 ease 0s;
+}
+
+.nav-links li a:hover {
+    color: rgb(48, 164, 252);
+    border-bottom: 2px solid rgb(48, 164, 252);
+    font-weight: 600;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    background-color: rgb(48, 164, 252);
+    border-width: 3px;
+    border: none
+}
+#btn1 {
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    border-color: burlywood;
+    border-width: 2px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#btn1:hover {
+    background-color: red;
+    border-color: white;
+}
+#btn2 {
+    border-radius: 70%;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    background-color: burlywood;
+    border-width: 2px;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border: none;
+    box-shadow: 5px 3px 19px -6px rgba(0,0,0,0.79);
+    -webkit-box-shadow: 5px 3px 19px -6px rgba(0,0,0,0.79);
+    -moz-box-shadow: 5px 3px 19px -6px rgba(0,0,0,0.79);
+}
+
+#btn2:hover {
+    background-color: rgb(147, 123, 90);
+    border-color: white;
+}
+
+button:hover {
+    background-color: rgb(105, 187, 250);
+    color: white;
+}
+
+container-2 {
+    display: flex;
+    justify-content: left;
+    padding-left: 5px;
+    background-color: lightgrey;
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-areas:
+    "header1 header2 header3 header4"
+    "note datum update delete";
+    border-bottom: 2px solid grey;
+}
+
+.grid-item-h1 {
+    grid-area: header1;
+    margin-bottom: 20px;
+}
+
+.grid-item-h2 {
+    grid-area: header2;
+    margin-bottom: 20px;
+    
+}
+
+.grid-item1 {
+    grid-area: note;
+}
+
+.grid-item2 {
+    grid-area: datum;
+}
+
+.grid-item3 {
+    grid-area: update;
+}
+
+.grid-item4 {
+    grid-area: delete;
+}
+
+
+.grid-create-btn {
+    grid-area: header4;
+    margin-bottom: 10px;
+}
+
+.grid-item3, .grid-item4 {
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    border-color: burlywood;
+    border-width: 3px;
+    height: 20px;
+    font-size: 10px;
+}
+
+
+.grid-note, .grid-date, .grid-del, .grid-up{
+    margin-bottom: 10px;
+    border-top: 1px solid burlywood;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    height: 150px;
+}
+
+.grid-del, .grid-up:hover {
+    cursor: default;
+}
+
+.grid-del, .grid-up {
+    padding-left: 100px;
+    cursor: pointer;
+}
+
+.footer-container {
+    display: flex;
+    background-color: darkgrey;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-right: auto;
+    cursor: default;
+    height: 200px;
+    margin-top: 200px;
+}
+
+.footer-grid-1 {
+    display: grid;
+    grid-column-gap: 200px;
+    grid-template-areas: 
+    "ContactHead AdditionalHead"
+    "info1 info2";
+    background-color: darkgray;
+}
+
+.footerInfo1 {
+    grid-area: info1;
+    background-color: darkgray;
+}
+
+.footerInfo2 {
+    grid-area: info2;
+    background-color: darkgray;
+}
+
+.footerHead1 {
+    grid-area: ContactHead;
+    background-color: darkgray;
+}
+
+.footerHead2 {
+    grid-area: AdditionalHead;
+    background-color: darkgray;
+}
+
+.formInputNote input{
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 400px;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.formInputDate input{
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 400px;
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.formInputButton input{
+    background-color: burlywood;
+    color: black;
+    height: 35px;
+    width: 400px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+input:hover {
+    border: 2px solid burlywood;
+}
+
+.formInputButton input:hover{
+    background-color: rgb(193, 151, 92);
+}
+
+.grid-main {
+    display: grid;
+    grid-template-areas: 
+    "sidebar mainContent"
+    "info1 info2";
+}
+
+.sidebar {
+    list-style: none;
+    width: 200px;
+    height: 1080px;
+    background: lightgrey;
+    grid-area: sidebar;
+    box-shadow: 5px 1px 15px 4px rgba(0,0,0,0.38);
+}
+
+.sidebar li {
+    padding: 0px 20px;
+    padding-top: 10px;
+    background: lightgrey;
+    width: 200px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.sidebar li a {
+    transition: all 0.3 ease 0s;
+    background-color: lightgrey;
+}
+
+.sidebar li a:hover {
+    color: rgb(48, 164, 252);
+    border-bottom: 2px solid rgb(48, 164, 252);
+    font-weight: 600;
+}
+
+.main-grid-items {
+    grid-area: mainContent;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10%;
+    background-color: lightgray;
+    padding-bottom: 110px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0e0d0c;
+    margin-right: auto;
+    cursor: default;
+    grid-area: mainContent;
+}
+
+.container-3 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: lightgray;
+    padding-bottom: 110px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0e0d0c;
+    margin-right: auto;
+    cursor: default;
+    grid-area: mainContent;
+    width: 1500px;
+    box-shadow: -1px 1px 14px 4px rgba(0,0,0,0.38);
+}
+
+
+
+
+
+
+
