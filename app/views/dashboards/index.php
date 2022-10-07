@@ -1,0 +1,1 @@
+<a href="/Dashboards/student"><button>Student dashboard</button></a>

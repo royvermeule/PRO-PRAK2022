@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="css/auracss.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container-11">
         <section>
             <div class="row flex-jc-center">
-                    <h1>Over Ons</h1>
+                <h1>Over Ons</h1>
             </div>
 
             <div class="row flex-jc-center">
@@ -26,7 +28,9 @@
         <section>
             <div class="row flex-jc-center">
                 <div class="col-6 col-l-12">
-                    <div class="row flex-jc-center"><h2>Contact</h2></div>
+                    <div class="row flex-jc-center">
+                        <h2>Contact</h2>
+                    </div>
                     <p>Heeft u een probleem gevonden of een vraag? Neem dan hieronder contact met ons op!</p>
                     <div>
                         <form action="">
@@ -46,4 +50,5 @@
 
     </div>
 </body>
+
 </html>

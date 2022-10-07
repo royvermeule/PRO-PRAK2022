@@ -6,10 +6,12 @@
 //     locationId int NOT NULL
 //   );
 
-class Academy extends BaseModel {
+class Academy extends BaseModel
+{
     private $db; //pdo database object
 
-    public function __construct(Database $DB = new Database()) {
+    public function __construct(Database $DB = new Database())
+    {
         $this->db = $DB;
     }
 
@@ -17,7 +19,8 @@ class Academy extends BaseModel {
      * Get an academy by ID
      * @param id The id of the academy
      */
-    public function getById($id) {
+    public function getById($id)
+    {
         $this->db->query("SELECT * FROM Academy WHERE id = :id");
         $this->db->bind(':id', $id);
         return $this->db->single();
@@ -26,7 +29,8 @@ class Academy extends BaseModel {
     /**
      * Get all academies
      */
-    public function getAll() {
+    public function getAll()
+    {
         $this->db->query("SELECT * FROM Academy");
         return $this->db->resultSet();
     }
@@ -35,7 +39,8 @@ class Academy extends BaseModel {
      * Create a new academy
      * @param data The data of the academy
      */
-    public function createAcademy($data) {
+    public function createAcademy($data)
+    {
         $this->db->query("INSERT INTO Academy (name, locationId) VALUES (:name, :locationId)");
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':locationId', $data['locationId']);
@@ -46,7 +51,8 @@ class Academy extends BaseModel {
      * Update an academy
      * @param data The data of the academy
      */
-    public function updateAcademy($data) {
+    public function updateAcademy($data)
+    {
         $this->db->query("UPDATE Academy SET name = :name, locationId = :locationId WHERE id = :id");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':name', $data['name']);
@@ -58,7 +64,8 @@ class Academy extends BaseModel {
      * Delete an academy
      * @param id The id of the academy
      */
-    public function deleteAcademy($id) {
+    public function deleteAcademy($id)
+    {
         $this->db->query("DELETE FROM Academy WHERE id = :id");
         $this->db->bind(':id', $id);
         return $this->db->execute();
@@ -68,10 +75,10 @@ class Academy extends BaseModel {
      * Get all academies by location
      * @param locationId The id of the location
      */
-    public function getByLocation($locationId) {
+    public function getByLocation($locationId)
+    {
         $this->db->query("SELECT * FROM Academy WHERE locationId = :locationId");
         $this->db->bind(':locationId', $locationId);
         return $this->db->resultSet();
     }
-
 }
