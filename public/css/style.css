@@ -353,6 +353,110 @@ input:hover {
 }
 
 
+/*//////////////////////     unigrids     /////////////////////*/
+
+/*    unigrid col2    */
+.unigrid-col2 {
+  display: grid;
+  grid-template-areas: 
+  "UniHeader1 UniHeader2"
+  "Col1 Col2"
+}
+
+/*    unigrid col3    */
+.unigrid-col3 {
+  display: grid;
+  grid-template-areas: 
+  "UniHeader1 UniHeader2 UniHeader3"
+  "Col1 Col2 Col3"
+}
+
+/*    unigrid col4   */
+.unigrid-col4 {
+  display: grid;
+  grid-template-areas: 
+  "UniHeader1 UniHeader2 UniHeader3 UniHeader4"
+  "Col1 Col2 Col3 Col4"
+}
+
+/*    unigrid col5    */
+.unigrid-col5 {
+  display: grid;
+  grid-template-areas: 
+  "UniHeader1 UniHeader2 UniHeader3 UniHeader4 UniHeader5"
+  "Col1 Col2 Col3 Col4 Col5"
+}
+
+/*    unigrid col6    */
+.unigrid-col6 {
+  display: grid;
+  grid-template-areas: 
+  "UniHeader1 UniHeader2 UniHeader3 UniHeader4 UniHeader5 UniHeader6"
+  "Col1 Col2 Col3 Col4 Col5 Col6"
+}
+
+/*    gird Headers  */
+.GridHeader1 { 
+  grid-area: UniHeader1;
+}
+.GridHeader2 {
+  grid-area: UniHeader2;
+}
+.GridHeader3 {
+  grid-area: UniHeader3;
+}
+.GridHeader4 {
+  grid-area: UniHeader4;
+}
+.GridHeader5 {
+  grid-area: UniHeader5;
+}
+.GridHeader6 {
+  grid-area: UniHeader6;
+}
+.GridHeader1, .GridHeader2, .GridHeader3, .GridHeader4, .GridHeader5, .GridHeader6 {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+} 
+
+/*    grid Collumns   */
+
+.GridCol1 {
+    grid-area: Col1;
+}
+.GridCol2 {
+    grid-area: Col2;
+}
+.GridCol3 {
+    grid-area: Col3;
+}
+.GridCol4 {
+    grid-area: Col4;
+}
+.GridCol5 {
+    grid-area: Col5;
+}
+.GridCol6 {
+    grid-area: Col6;
+}
+
+.GridCol1, .GridCol2, .GridCol3, .GridCol4, .GridCol5, .GridCol6 {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+} 
+
+
+/*//////////////////////     END unigrids END    /////////////////////*/
+
+
 
 
 
