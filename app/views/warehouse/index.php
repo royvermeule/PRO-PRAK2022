@@ -43,11 +43,11 @@
                 <=URLROOT?>/CWControllers/<=id?> -->
 <table>
 <?php 
-                foreach ($data['warehouses'] as $warehouse) {
-                    ?>
-                    <td><button><a href="<?=URLROOT?>/CWControllers/overview/<?=$warehouse->id?>"><?= $warehouse->name?></a></button></td>
-            
-                        <?php }?>
+        foreach ($data['warehouses'] as $warehouse) {
+            ?>
+            <td><button><a href="<?=URLROOT?>/CWControllers/generateOverview/<?=$warehouse->id?>"><?= $warehouse->name?></a></button></td>
+    
+                <?php }?>
 </table>
                 <!-- <table>
                     <td><button><a href="<=URLROOT?>/CWControllers/WDaltonlaan100">Daltonlaan100</a></button></td>
