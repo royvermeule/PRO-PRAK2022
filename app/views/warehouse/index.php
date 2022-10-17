@@ -1,3 +1,15 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warehouse</title>
+</head>
+<body>
+    <h1>warehouse </h1>
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +43,11 @@
                 <=URLROOT?>/CWControllers/<=id?> -->
 <table>
 <?php 
-                foreach ($data['warehouses'] as $warehouse) {
-                    ?>
-                    <td><button><a href="<?=URLROOT?>/controllers/CWControllers/<?=$warehouse->id?>"><?= $warehouse->name?></a></button></td>
-            
-                        <?php }?>
+        foreach ($data['warehouses'] as $warehouse) {
+            ?>
+            <td><button><a href="<?=URLROOT?>/CWControllers/generateOverview/<?=$warehouse->id?>"><?= $warehouse->name?></a></button></td>
+    
+                <?php }?>
 </table>
                 <!-- <table>
                     <td><button><a href="<=URLROOT?>/CWControllers/WDaltonlaan100">Daltonlaan100</a></button></td>

@@ -6,7 +6,7 @@
 //     articleId int NOT NULL,
 //     amount int NOT NULL
 //   );
-  
+
 Class Storage extends BaseModel {
     private $db; //pdo database object
 
@@ -65,5 +65,14 @@ Class Storage extends BaseModel {
         $this->db->query("DELETE FROM Storage WHERE id = :id");
         $this->db->bind(':id', $id);
         return $this->db->execute();
+    }
+    /**
+     * Get all storages by warehouseId
+     * @param warehouseId The warehouseId of the storage
+     */
+    public function getByWarehouseId($warehouseId) {
+        $this->db->query("SELECT * FROM Storage WHERE warehouseId = :warehouseId");
+        $this->db->bind(':warehouseId', $warehouseId);
+        return $this->db->resultSet();
     }
 }
