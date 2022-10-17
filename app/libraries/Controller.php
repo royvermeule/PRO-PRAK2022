@@ -2,8 +2,11 @@
 // Dit wordt de parentclass van alle andere controller
 // We loaden de model en de view
 class Controller {
+  // Geen properties
+  
+
   public function model($model) {
-    require_once('../app/models/' . $model . '.php');
+    require_once('../app/models/' . $model . '.model.php');
     return new $model();
   }
 
@@ -14,4 +17,13 @@ class Controller {
       die('View bestaat niet');
     }
   }
+}
+
+class BaseModel {
+  private $db;
+
+  public function __construct() {
+      $this->db = new Database();
+  }
+
 }
